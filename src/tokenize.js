@@ -185,7 +185,7 @@ function tokenize(source, alternateCommentMode) {
         for (var i = 0; i < lines.length; ++i)
             lines[i] = lines[i]
                 .replace(alternateCommentMode ? setCommentAltRe : setCommentRe, "")
-                .trim();
+                .trimEnd();
         commentText = lines
             .join("\n")
             .trim();
