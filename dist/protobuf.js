@@ -1,6 +1,6 @@
 /*!
- * protobuf.js v6.11.4 (c) 2016, daniel wirtz
- * compiled fri, 16 sep 2022 21:14:49 utc
+ * protobuf.js v6.11.5 (c) 2016, daniel wirtz
+ * compiled mon, 03 oct 2022 00:22:39 utc
  * licensed under the bsd-3-clause license
  * see: https://github.com/dcodeio/protobuf.js for details
  */
@@ -6293,7 +6293,7 @@ function tokenize(source, alternateCommentMode) {
         for (var i = 0; i < lines.length; ++i)
             lines[i] = lines[i]
                 .replace(alternateCommentMode ? setCommentAltRe : setCommentRe, "")
-                .trim();
+                .trimEnd();
         commentText = lines
             .join("\n")
             .trim();
