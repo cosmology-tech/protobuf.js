@@ -1,5 +1,5 @@
 {
-  "name": "@pyramation/protobufjs",
+  "name": "@cosmology/protobufjs",
   "version": "6.11.5",
   "versionScheme": "~",
   "description": "Protocol Buffers for JavaScript (& TypeScript).",
