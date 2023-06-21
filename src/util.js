@@ -95,7 +95,7 @@ var camelCaseRe = /_([a-zA-Z0-9])/g;
  * @returns {string} Converted string
  */
 util.camelCase = function camelCase(str) {
-    return str.substring(0, 1).toLowerCase()
+    return str.substring(0, 1)
          + str.substring(1)
                .replace(camelCaseRe, function($0, $1) { return $1.toUpperCase(); });
 };
