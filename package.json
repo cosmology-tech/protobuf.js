@@ -20,6 +20,9 @@
     "pbjs": "bin/pbjs",
     "pbts": "bin/pbts"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "bench": "node bench",
     "build": "npm run build:bundle && npm run build:types",

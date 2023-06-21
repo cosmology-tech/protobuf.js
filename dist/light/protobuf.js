@@ -1,6 +1,6 @@
 /*!
  * protobuf.js v6.11.5 (c) 2016, daniel wirtz
- * compiled mon, 03 oct 2022 00:22:39 utc
+ * compiled wed, 21 jun 2023 20:43:40 utc
  * licensed under the bsd-3-clause license
  * see: https://github.com/dcodeio/protobuf.js for details
  */
@@ -5735,7 +5735,7 @@ util.ucFirst = function ucFirst(str) {
     return str.charAt(0).toUpperCase() + str.substring(1);
 };
 
-var camelCaseRe = /_([a-z])/g;
+var camelCaseRe = /_([a-zA-Z0-9])/g;
 
 /**
  * Converts a string to camel case.
@@ -5743,7 +5743,7 @@ var camelCaseRe = /_([a-z])/g;
  * @returns {string} Converted string
  */
 util.camelCase = function camelCase(str) {
-    return str.substring(0, 1)
+    return str.substring(0, 1).toLowerCase()
          + str.substring(1)
                .replace(camelCaseRe, function($0, $1) { return $1.toUpperCase(); });
 };
