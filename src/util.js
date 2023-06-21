@@ -87,7 +87,7 @@ util.ucFirst = function ucFirst(str) {
     return str.charAt(0).toUpperCase() + str.substring(1);
 };
 
-var camelCaseRe = /_([a-z])/g;
+var camelCaseRe = /_([a-zA-Z0-9])/g;
 
 /**
  * Converts a string to camel case.
@@ -95,7 +95,7 @@ var camelCaseRe = /_([a-z])/g;
  * @returns {string} Converted string
  */
 util.camelCase = function camelCase(str) {
-    return str.substring(0, 1)
+    return str.substring(0, 1).toLowerCase()
          + str.substring(1)
                .replace(camelCaseRe, function($0, $1) { return $1.toUpperCase(); });
 };
